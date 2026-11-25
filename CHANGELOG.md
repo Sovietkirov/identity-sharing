@@ -1,6 +1,7 @@
 ## v2.1 — 2026-11-25
 - MEMORY.md 고정을 유지하고 변동을 STATE.md로 분리
 - LAYERS, README, TASKS/sync를 STATE 구조에 맞춤
+- IDENTITY_INSIDE 구조를 outside IDENTITY 형식에 맞춤
 
 ## v2.0 — 2026-11-25
 - 명명 규칙 확정: 뮤즈 파일명 일치, 베니스 전용은 _INSIDE
