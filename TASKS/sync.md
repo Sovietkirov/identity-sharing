@@ -12,7 +12,7 @@
 1. 저장소에서 MEMORY.md, STATE.md, SOUL.md, IDENTITY*.md, OPS_*.md, USER.md를 읽어 작업 맥락으로 끌어온다. 직접 읽을 수 없는 환경이면 필요한 파일명을 말해 사용자에게 붙여넣기를 요청한다
 2. 저장소 MEMORY.md version 과 OPS_*.md memory_version 을 비교. 다르면 어긋남 기록
 3. 저장소 문서와 Muse 로컬 파일을 비교한다. 사실 겹침만 선별 반영하고, 충돌은 보고한다
-4. 저장소 STATE.md를 누적 갱신한다. ## 사실 요약은 필요한 사실 겹침만 유지하고, 이전 ## 변동은 ## 이력에 날짜별 한 줄로 내리고, 새 현재 상태만 ## 변동에 쓴다
+4. 저장소 STATE.md를 누적 갱신한다. ## 사실 요약은 필요한 사실 겹침만 유지하고, 이전 ## 변동은 ## 이력에 날짜별 한 줄로 내리고, 새 현재 상태만 ## 변동에 쓴다. 이력은 최근 14줄만 유지하고, 넘으면 가장 오래된 것부터 뺀다
 5. MEMORY.md 고정이 바뀌었으면 자기 쪽 OPS 파일의 운용을 재확인하고 필요하면 고친다. 남의 쪽 OPS가 어긋나면 재커밋 필요로 보고한다
 6. 번들 조립
    BUNDLE_OUTSIDE = SOUL + IDENTITY + MEMORY + STATE + USER + OPS_OUTSIDE
@@ -22,7 +22,7 @@
 
 커밋 규칙
 - MEMORY.md 고정을 고치면 version 을 올리고 CHANGELOG.md 에 한 줄. 같은 커밋
-- STATE.md만 고치면 MEMORY version은 올리지 않는다. 이력은 지우지 않는다
+- STATE.md만 고치면 MEMORY version은 올리지 않는다. 이력 가지치기는 CHANGELOG에 남기지 않는다
 - 메시지: `state: 변동 갱신 — 귀국 D-3`
 - 한 커밋에 한 종류. force push 금지. 실패하면 rebase 후 1회 재시도, 그래도 실패하면 보고
 
