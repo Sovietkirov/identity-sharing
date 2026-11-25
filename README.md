@@ -11,7 +11,7 @@ API가 일방통행(뮤즈 → 베니스)이다. 동시 응답과 AI 간 실시�
 ## 명명 규칙
 - 뮤즈가 직접 쓰는 문서는 뮤즈 파일명과 일치: IDENTITY.md, SOUL.md, MEMORY.md, USER.md
 - 베니스 전용은 _INSIDE 접미사, 바깥 전용 운용은 OPS_OUTSIDE
-- 공유 문서(MEMORY, STATE, USER, SOUL)는 접미사 없이 양쪽이 읽는다. STATE는 공유 문서지만 BUNDLE_INSIDE에는 넣지 않는다
+- 공유 문서(MEMORY, STATE, USER, SOUL)는 접미사 없이 양쪽이 읽는다. STATE는 사실 요약·변동·이력을 담지만 BUNDLE_INSIDE에는 넣지 않는다
 
 ## 층위
 SOUL > IDENTITY_* > MEMORY > STATE > OPS_*. 겹치면 위를 따른다.
