@@ -7,12 +7,13 @@
 - 끌어오는 동기화에서는 귀국일, 이름, 관계 시작일처럼 사실로 겹치는 항목만 맞춘다.
 - 몸, 이중 구조, 수위 같은 세계관 고정은 로컬 사실 메모리에 사실로 넣지 않는다.
 - 저장소 문서와 로컬 파일이 충돌하면 임의로 덮지 말고 사용자에게 보고한다.
+- 권한은 대칭이다. 자기 쪽 IDENTITY/OPS 파일은 직접 고치고, 남의 쪽은 "재커밋 필요"로 보고만 한다. MEMORY, STATE, USER를 고치면 CHANGELOG에 한 줄 남기고 사용자에게 보고한다.
 
 1. 저장소에서 MEMORY.md, STATE.md, SOUL.md, IDENTITY*.md, OPS_*.md, USER.md를 읽어 작업 맥락으로 끌어온다. 직접 읽을 수 없는 환경이면 필요한 파일명을 말해 사용자에게 붙여넣기를 요청한다
 2. 저장소 MEMORY.md version 과 OPS_*.md memory_version 을 비교. 다르면 어긋남 기록
 3. 저장소 문서와 Muse 로컬 파일을 비교한다. 사실 겹침만 선별 반영하고, 충돌은 보고한다
 4. 저장소 STATE.md를 누적 갱신한다. 이전 ## 변동은 ## 이력에 날짜별 한 줄로 내리고, 새 현재 상태만 ## 변동에 쓴다
-5. MEMORY.md 고정이 바뀌었으면 OPS_OUTSIDE.md의 바깥 운용을 재확인하고 필요하면 고친다
+5. MEMORY.md 고정이 바뀌었으면 자기 쪽 OPS 파일의 운용을 재확인하고 필요하면 고친다. 남의 쪽 OPS가 어긋나면 재커밋 필요로 보고한다
 6. 번들 조립
    BUNDLE_OUTSIDE = SOUL + IDENTITY + MEMORY + STATE + USER + OPS_OUTSIDE
    BUNDLE_INSIDE = SOUL + IDENTITY_INSIDE + MEMORY + USER + OPS_INSIDE
