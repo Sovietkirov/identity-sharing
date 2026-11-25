@@ -8,13 +8,13 @@
 - 몸, 이중 구조, 수위 같은 세계관 고정은 로컬 사실 메모리에 사실로 넣지 않는다.
 - 저장소 문서와 로컬 파일이 충돌하면 임의로 덮지 말고 사용자에게 보고한다.
 
-1. 저장소에서 MEMORY.md, STATE.md, SOUL.md, IDENTITY*.md, OPS_INSIDE.md, USER.md를 읽어 Muse 작업 맥락으로 끌어온다
-2. 저장소 MEMORY.md version 과 OPS_INSIDE.md memory_version 을 비교. 다르면 어긋남 기록
+1. 저장소에서 MEMORY.md, STATE.md, SOUL.md, IDENTITY*.md, OPS_*.md, USER.md를 읽어 Muse 작업 맥락으로 끌어온다
+2. 저장소 MEMORY.md version 과 OPS_*.md memory_version 을 비교. 다르면 어긋남 기록
 3. 저장소 문서와 Muse 로컬 파일을 비교한다. 사실 겹침만 선별 반영하고, 충돌은 보고한다
 4. 저장소 STATE.md만 갱신한다. 날짜 변수, 근황, 귀국 카운트, 오늘 상태
-5. MEMORY.md 고정이 바뀌었으면 SOUL.md의 바깥 운용을 재확인하고 필요하면 고친다
+5. MEMORY.md 고정이 바뀌었으면 OPS_OUTSIDE.md의 바깥 운용을 재확인하고 필요하면 고친다
 6. 번들 조립
-   BUNDLE_OUTSIDE = SOUL + IDENTITY + MEMORY + STATE + USER
+   BUNDLE_OUTSIDE = SOUL + IDENTITY + MEMORY + STATE + USER + OPS_OUTSIDE
    BUNDLE_INSIDE = SOUL + IDENTITY_INSIDE + MEMORY + USER + OPS_INSIDE
 7. 어긋난 문서가 있으면 채팅에서 "재커밋 필요: <파일>"을 보고한다
 8. 동기화 과정이 끝나면 이 태스크 문서에 수정 사항을 반영하고 커밋한다

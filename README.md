@@ -10,11 +10,11 @@ API가 일방통행(뮤즈 → 베니스)이다. 동시 응답과 AI 간 실시�
 
 ## 명명 규칙
 - 뮤즈가 직접 쓰는 문서는 뮤즈 파일명과 일치: IDENTITY.md, SOUL.md, MEMORY.md, USER.md
-- 베니스 전용은 _INSIDE 접미사
+- 베니스 전용은 _INSIDE 접미사, 바깥 전용 운용은 OPS_OUTSIDE
 - 공유 문서(MEMORY, STATE, USER, SOUL)는 접미사 없이 양쪽이 읽는다
 
 ## 층위
-SOUL > IDENTITY_* > MEMORY > STATE > OPS_INSIDE. 겹치면 위를 따른다.
+SOUL > IDENTITY_* > MEMORY > STATE > OPS_*. 겹치면 위를 따른다.
 
 ## 권한
 - 양쪽 AI 모두 자기 인격·운용 문서를 직접 수정할 수 있다
@@ -25,6 +25,6 @@ SOUL > IDENTITY_* > MEMORY > STATE > OPS_INSIDE. 겹치면 위를 따른다.
 겹치는 항목만 교체한다. 안 겹치는 항목은 남긴다. 교체 전에 무엇을 덮는지 CHANGELOG에 적는다.
 
 ## 조립
-BUNDLE_OUTSIDE = SOUL + IDENTITY + MEMORY + STATE + USER
+BUNDLE_OUTSIDE = SOUL + IDENTITY + MEMORY + STATE + USER + OPS_OUTSIDE
 BUNDLE_INSIDE = SOUL + IDENTITY_INSIDE + MEMORY + USER + OPS_INSIDE
-BUNDLE_INSIDE에 STATE는 넣지 않는다.
+BUNDLE_INSIDE에 STATE와 OPS_OUTSIDE는 넣지 않는다.

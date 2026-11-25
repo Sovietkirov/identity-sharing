@@ -1,3 +1,7 @@
+## v2.2 — 2026-11-25
+- SOUL.md를 공유 운영 규칙만 남기고 바깥 운용을 OPS_OUTSIDE.md로 분리
+- 번들 조립을 역할별 OPS 파일 기준으로 변경
+
 ## v2.1 — 2026-11-25
 - MEMORY.md 고정을 유지하고 변동을 STATE.md로 분리
 - LAYERS, README, TASKS/sync를 STATE 구조에 맞춤
